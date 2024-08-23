@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jullie's Song Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/static/close-up-of-sea-water.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .box-container {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .box a {
+            color: #3d8991;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Space between the image and text */
+        }
+        .box a:hover {
+            text-decoration: underline;
+        }
+        .box img {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .artist-info {
+            display: flex;
+            align-items: center; /* Aligns items vertically */
+            gap: 10px /* Space between the image and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <!-- Box for Gilsons -->
+        <div class="box">
+            <img src="{{ cover_image_gilsons }}" alt="Album Cover">
+            <h2>{{ song_title_gilsons }}</h2>
+            <a href="{{ song_url_gilsons }}" target="_blank">
+                <div class="artist-info">
+                    <img src="/static/gilsons.jpg" alt="Gilsons" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover;">
+                    Gilsons
+                </div>
+            </a>
+        </div>
+
+        <!-- Box for Tim Maia -->
+        <div class="box">
+            <img src="{{ cover_image_tim }}" alt="Album Cover">
+            <h2>{{ song_title_tim }}</h2>
+            <a href="{{ song_url_tim }}" target="_blank">
+                <div class="artist-info">
+                    <img src="/static/tim_maia.jpg" alt="Tim Maia" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover;">
+                    Tim Maia
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
